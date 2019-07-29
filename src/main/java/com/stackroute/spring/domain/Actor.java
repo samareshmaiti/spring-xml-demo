@@ -1,6 +1,11 @@
 package com.stackroute.spring.domain;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component
 public class Actor  {
+    @Autowired
     private int age;
     private String name;
     private String gender;
@@ -9,8 +14,9 @@ public class Actor  {
     public Actor() {
     }
 
-
+    @Autowired
     public Actor(int age, String name, String gender) {
+
         this.age = age;
         this.name = name;
         this.gender = gender;
@@ -19,7 +25,7 @@ public class Actor  {
     public int getAge() {
         return age;
     }
-
+    @Autowired
     public void setAge(int age) {
         this.age = age;
     }
@@ -27,7 +33,7 @@ public class Actor  {
     public String getName() {
         return name;
     }
-
+    @Autowired
     public void setName(String name) {
         this.name = name;
     }
@@ -35,7 +41,7 @@ public class Actor  {
     public String getGender() {
         return gender;
     }
-
+    @Autowired
     public void setGender(String gender) {
         this.gender = gender;
     }

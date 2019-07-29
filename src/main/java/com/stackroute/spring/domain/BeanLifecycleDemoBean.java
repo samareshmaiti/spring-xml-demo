@@ -2,7 +2,9 @@ package com.stackroute.spring.domain;
 
 import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.InitializingBean;
+import org.springframework.stereotype.Component;
 
+@Component
 public class BeanLifecycleDemoBean implements InitializingBean, DisposableBean {
     String message;
 
@@ -25,16 +27,6 @@ public class BeanLifecycleDemoBean implements InitializingBean, DisposableBean {
     @Override
     public void destroy() throws Exception {
         System.out.println("Init method after properties are set : " + message);
-    }
-    public void customInit()
-    {
-        System.out.println("customInit() called");
-    }
-
-    public void customDestroy()
-    {
-
-        System.out.println("customDestroy() called , closing opened resources");
     }
 
 
