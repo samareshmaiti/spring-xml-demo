@@ -1,4 +1,4 @@
-package com.stackroute.test.domain;
+package com.stackroute.spring.domain;
 
 public class Movie {
     private Actor actor;

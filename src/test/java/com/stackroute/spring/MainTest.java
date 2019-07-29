@@ -1,11 +1,11 @@
-package com.stackroute.test;
+package com.stackroute.spring;
 
 import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
 /**
- * Unit test for simple App.
+ * Unit test for simple Main.
  */
 public class MainTest
 {
