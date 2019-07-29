@@ -9,8 +9,12 @@
         <property name="gender" value="male"></property>
 
     </bean>
-    <bean name="movie" class="com.stackroute.spring.domain.Movie" autowire="byName">
+    <bean name="movie" class="com.stackroute.spring.domain.Movie">
         <property name="actor" ref="actor"></property>
+    </bean>
+    <bean id="BeanLifeCycleDemoBean" class="com.stackroute.spring.domain.BeanLifecycleDemoBean" init-method="customInit" destroy-method="customDestroy">
+
+        <property name="message" value="i'm property message" />
     </bean>
 
 

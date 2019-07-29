@@ -7,7 +7,7 @@ import org.springframework.beans.factory.BeanNameAware;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 
-public class Movie implements BeanNameAware, BeanFactoryAware, ApplicationContextAware {
+public class Movie  {
     private Actor actor;
 
     public Actor getActor() {
@@ -33,18 +33,5 @@ public class Movie implements BeanNameAware, BeanFactoryAware, ApplicationContex
                 '}';
     }
 
-    @Override
-    public void setBeanFactory(BeanFactory beanFactory) throws BeansException {
-        System.out.println("BeanFactory interface executed");
-    }
 
-    @Override
-    public void setBeanName(String s) {
-        System.out.println("BeanName interface executed");
-    }
-
-    @Override
-    public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
-        System.out.println("Application Context executed");
-    }
 }
