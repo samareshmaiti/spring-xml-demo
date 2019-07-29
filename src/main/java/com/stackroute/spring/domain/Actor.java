@@ -1,6 +1,13 @@
 package com.stackroute.spring.domain;
 
-public class Actor {
+import org.springframework.beans.BeansException;
+import org.springframework.beans.factory.BeanFactory;
+import org.springframework.beans.factory.BeanFactoryAware;
+import org.springframework.beans.factory.BeanNameAware;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.ApplicationContextAware;
+
+public class Actor  {
     private int age;
     private String name;
     private String gender;
@@ -48,4 +55,6 @@ public class Actor {
                 ", gender='" + gender + '\'' +
                 '}';
     }
+
+
 }

@@ -12,9 +12,6 @@
     <bean name="movie" class="com.stackroute.spring.domain.Movie" autowire="byName">
         <property name="actor" ref="actor"></property>
     </bean>
-    <bean name="movie1" class="com.stackroute.spring.domain.Movie" autowire="byName">
-        <property name="actor" ref="actor"></property>
-    </bean>
 
 
 <!--    <bean id="movie" class="com.stackroute.test.domain.Movie">-->
