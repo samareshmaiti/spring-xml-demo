@@ -8,7 +8,6 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.core.io.ClassPathResource;
 
-
 /**
  * Hello world!
  *
@@ -17,16 +16,13 @@ public class Main
 {
     public static void main( String[] args )
     {
+        ApplicationContext context=new ClassPathXmlApplicationContext("beans.xml");
+        Movie movie =(Movie) context.getBean("movie");
+        System.out.println(movie);
+//        XmlBeanFactory factory = new XmlBeanFactory(new ClassPathResource("beans.xml"));
+//        Movie movie1=(Movie) factory.getBean("movie1");
+//        System.out.println(movie1);
 
-            ApplicationContext context=new ClassPathXmlApplicationContext("beans.xml");
-            Movie movie =(Movie) context.getBean("movie");
-            System.out.println(movie);
-        Movie movie1 =(Movie) context.getBean("movie1");
-        System.out.println(movie1);
-        Movie movie2 =(Movie) context.getBean("movie");
-        System.out.println(movie2);
-        System.out.println(movie==movie1);
-
-        }
     }
+}
 
